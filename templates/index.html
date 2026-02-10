@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Powered Student Support Chatbot</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f6fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 480px;
+      background: white;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2d76d9;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type='text'] {
+      flex-grow: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #2d76d9;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #195bbd;
+    }
+
+    .response-box {
+      background: #e7f0ff;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1rem;
+      white-space: pre-wrap;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="chat-container">
+    <h2>AI-Powered Student Support Chatbot 🤖</h2>
+
+    <form method="post">
+      <input
+        type="text"
+        name="message"
+        placeholder="Type your academic question..."
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+
+    {% if response %}
+      <div class="response-box">
+        <strong>Bot:</strong>
+        <pre style="white-space: pre-wrap; margin: 0;">{{ response }}</pre>
+      </div>
+    {% endif %}
+
+    <div class="footer">
+      Built using Python • Flask • AI
+    </div>
+  </div>
+
+</body>
+</html>
